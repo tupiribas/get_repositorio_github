@@ -1,4 +1,4 @@
-# Reconhecimento facial com IA
+# Consumindo API do GitHub
 
 ## Configuração do projeto
 
@@ -30,7 +30,7 @@ Após pressionar o **Enter**, irá aparecer nesse formato:
 > (nome da venv) C:\User\...\Desktop\(nome do seu projeto)
 > ```
 
-### 2. Instalação das biblioteca s
+### 2. Instalação das bibliotecas
 
 * Instalação requests:
 
