@@ -1,4 +1,7 @@
-import requests
+from json import loads
+from requests import get
+from pandas import DataFrame
+from utils import Utils
 
 
 class GitHub_Api():
@@ -6,22 +9,24 @@ class GitHub_Api():
         self.usuario = usuario
 
     def requisisao_api(self):
-        resp = requests.get(
-            f'https://api.github.com/users/{self.usuario}/repos')
-
-        if resp.status_code == 200:
-            return resp.json()
-        else:
-            return 'Não foi possível acessar este repositório.'
+        with get(f'https://api.github.com/users/{self.usuario}/repos') as api:
+            if api.status_code == 200:
+                dados_api = loads(api.content)
+                return dados_api
+            else:
+                return api.raise_for_status()
 
     def mostrar_tudo(self):
         dados_api = self.requisisao_api()
-        if type(dados_api) is not int:
-            for i in range(len(dados_api)):
-                print(dados_api[i]['name'])
-        else:
-            print(dados_api)
+        dado = DataFrame(dados_api)['name']
+        print(dado)
 
 
+cont_tempo = Utils.contador_temporal()
+
+cont_tempo.inicio()
 repositorio = GitHub_Api('tupiribas')
-print(repositorio.requisisao_api())
+repositorio.mostrar_tudo()
+cont_tempo.fim()
+
+print(f'Tempo: {cont_tempo.tempo_total():.2f}')
