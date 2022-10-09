@@ -24,13 +24,13 @@ Virtualenvs são uma forma de isolar diversos ambientes de desenvolvimento, assi
 > .\<nome da venv>\Scripts\activate
 > ```
 
-	Após pressionar o **Enter**, irá aparecer nesse formato:
+Após pressionar o **Enter**, irá aparecer nesse formato:
 
 > ```assembly
 > (nome da venv) C:\User\...\Desktop\(nome do seu projeto)
 > ```
 
-### 2. Instalação da biblioteca `requests` 
+### 2. Instalação das biblioteca s
 
 * Instalação requests:
 
@@ -38,6 +38,17 @@ Virtualenvs são uma forma de isolar diversos ambientes de desenvolvimento, assi
 > pip install requests
 > ```
 
+* Instalação da biblioteca Pandas 
+
+  Execute esse comando pelo `cmd` como administrador
+
+  > ```py
+  > pip install Pandas
+  > ```
+
+
 ## Sites utilizados
 
 1. [DOCUMENTAÇÃO DAS EXCEÇÕES](https://requests.readthedocs.io/en/latest/user/quickstart/#response-status-codes)
+1. [API REST - GITHUB](https://developer.github.com/v3/)
+1. []()
