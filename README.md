@@ -4,7 +4,7 @@
 
 ### 1. Instalando `virtualenv`
 
-	Virtualenvs são uma forma de isolar diversos ambientes de desenvolvimento, assim permitindo ao programador utilizar versões específicas de diversos pacotes sem impactar instalações de outras aplicações ou sistemas.
+Virtualenvs são uma forma de isolar diversos ambientes de desenvolvimento, assim permitindo ao programador utilizar versões específicas de diversos pacotes sem impactar instalações de outras aplicações ou sistemas.
 
 1. Abra seu Prompt de comando e digite:
 
